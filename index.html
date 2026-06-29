@@ -667,7 +667,7 @@ async function enviarContacto(e) {
 <a href="https://wa.me/51986346038?text=Hola%2C%20me%20interesa%20conocer%20m%C3%A1s%20sobre%20sus%20servicios%20de%20auditor%C3%ADa."
    target="_blank"
    rel="noopener noreferrer"
-   onclick="gtag('event', 'click_whatsapp', {'numero': '+51986346038', 'transport_type': 'beacon'})"
+   onclick="event.preventDefault(); gtag('event', 'click_whatsapp', {'numero': '+51986346038', 'transport_type': 'beacon'}); setTimeout(function(){ window.open('https://wa.me/51986346038?text=Hola%2C%20me%20interesa%20conocer%20m%C3%A1s%20sobre%20sus%20servicios%20de%20auditor%C3%ADa.', '_blank'); }, 300);"
    title="Contáctanos por WhatsApp"
    style="
      position: fixed;
